@@ -15,7 +15,7 @@ Depois disso, dividimos o programa em 5 principais funções:
 
 Fizemos os módulos "cardapio.h" e "fila_clientes.h", utilizando o princípio dos TADs, para assim facilitar e poluir menor o código principal do restaurante. Há também em anexo os arquivos .txt base para a criação do cardápio. Para o uso das bibliotecas, como foram apenas duas as utilizadas, optamos por não criar o MAKEFILE e no lugar compilar todas as bibliotecas juntas no gcc. Na hora compilação, foi feito da seguinte forma:
   gcc -o rest RESTAURANTE.c cardapio.c fila.c
-Não houveram problemas quanto a compilação quando rodamos o programa dessa maneira. 
+Não houveram problemas quanto a compilação quando rodamos o programa dessa maneira. Infelizmente, na versão final do programa, não foi possível implementar completamente a função PAGAMENTO, e a função da pilha de chocolate infelizmente também não foi implementada.
 
 Entre os arquivos enviados, há um screenshot de como é organizada a comanda dos clientes. Como a imagem mostra, é armazenada o nome do item e a quantidade pedida. 
 
