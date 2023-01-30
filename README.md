@@ -17,4 +17,6 @@ Fizemos os módulos "cardapio.h" e "fila_clientes.h", utilizando o princípio do
   gcc -o rest RESTAURANTE.c cardapio.c fila.c
 Não houveram problemas quanto a compilação quando rodamos o programa dessa maneira. 
 
+Entre os arquivos enviados, há um screenshot de como é organizada a comanda dos clientes. Como a imagem mostra, é armazenada o nome do item e a quantidade pedida. 
+
 O programa não é perfeito, ainda há muito espaço para melhoras e aperfeiçoamentos mas, para aquilo a qual ele se propõe fazer, ele funciona muito bem. 
