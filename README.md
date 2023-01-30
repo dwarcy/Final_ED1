@@ -13,4 +13,6 @@ Depois disso, dividimos o programa em 5 principais funções:
   - PAGAMENTO : a partir dos dados printados, será feita a procura dentro da lista do cardápio, os vlaores serão multiplicados por suas quantidades e o valor final a ser pago será printado na tela. 
   - FINALIZAR : deleta a comanda do cliente e remove o primeiro da fila após ele ser atendido. O cliente também recebe o chocolate, esse que é removido da pilha de chocolate.
 
+Fizemos os módulos "cardapio.h" e "fila_clientes.h", utilizando o princípio dos TADs, para assim facilitar e poluir menor o código principal do restaurante. Há também em anexo os arquivos .txt base para a criação do cardápio. 
+
 O programa não é perfeito, ainda há muito espaço para melhoras e aperfeiçoamentos mas, para aquilo a qual ele se propõe fazer, ele funciona muito bem. 
