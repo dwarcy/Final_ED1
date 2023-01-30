@@ -65,6 +65,7 @@ Lista *cardapio_iniciar(){
     float valor_temp;
     char nome_aux[MAX];
 
+    //cria a lista e aloca memoria
     lista = criar();
     if (lista == NULL)
     {
@@ -194,15 +195,14 @@ void entrada(int contador, Fila *f){
     printf("Insira seu nome: \n");
     scanf("%s", &nome);
 
+    //contador que representa o nome das comandas, pela ordem de chegada dos clientes
     numero = contador;
     sprintf(num,"%d",numero);
+    //concatenação das strings para poder ser usada na função fopen()
     strcat(comanda,num);
     strcat(comanda,a);
 
     c = fopen(comanda,"w+");
-
-    //escreve no arquivo o nome do cliente
-    //fprintf(c,"%s",nome);
 
     //insere um novo cliente na fila
     insere_fila(f,nome,c);
@@ -212,6 +212,7 @@ void entrada(int contador, Fila *f){
     //fclose(c);
 }
 
+//função que recebe o pedido do cliente, e a armazena dentro da comanda
 void pedido(int contador, Fila *f){
     int opc, cod, num, qtd;
     FILE *comand, *a;
@@ -224,6 +225,7 @@ void pedido(int contador, Fila *f){
     //abre a lista do cardapio
     l = cardapio_iniciar();
 
+    //transformando o contador em string
     sprintf(numero,"%d",contador);
     
     comand = f->primeiro->com;
@@ -256,11 +258,13 @@ void pedido(int contador, Fila *f){
         printf("\n[1]BEBIDAS\t\t[2]PRATO PRINCIPAL\t\t[3]SOBREMESAS\n");
         scanf("%d",&opc);
 
+        //laço dependendo de qual nó o item do pedido está
         if (opc == 1)
         {
             printf("Digite o codigo da bebida que deseja pedir.\n");
             scanf("%d", &cod);
 
+            //percorre as posições do vet[3] onde está on itens 
             for (int i = 0; i < 3; i++)
             {
                 if (cod == l->head->itens[i].codigo)
@@ -331,7 +335,8 @@ void pedido(int contador, Fila *f){
         }
         
     }
-
+    
+    //fecha comanda
     fclose(comand);   
 }
 
